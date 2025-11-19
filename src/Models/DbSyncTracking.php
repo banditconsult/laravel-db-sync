@@ -13,16 +13,8 @@ class DbSyncTracking extends Model
 
     protected $table = 'db_sync_tracking';
 
-    protected $fillable = [
-        'connection',
-        'table_name',
-        'direction',
-        'last_synced_at',
-        'sync_started_at',
-        'metadata',
-        'status',
-        'error_message',
-    ];
+    protected $guarded = [
+];
 
     protected $casts = [
         'direction' => SyncDirection::class,
